@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Auth Helper</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    .form-group {
+      margin-bottom: 10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 8px 15px;
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3367d6;
+    }
+    #savedDomains {
+      margin-top: 15px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    .domain-item {
+      padding: 5px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .delete-btn {
+      background-color: #f44336;
+      color: white;
+      border: none;
+      padding: 2px 5px;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Add Basic Auth Credentials</h2>
+  <div class="form-group">
+    <label for="domain">Domain (e.g., example.com):</label>
+    <input type="text" id="domain" placeholder="example.com">
+  </div>
+  <div class="form-group">
+    <label for="username">Username:</label>
+    <input type="text" id="username">
+  </div>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" id="password">
+  </div>
+  <button id="saveBtn">Save Credentials</button>
+  
+  <div id="savedDomains">
+    <h3>Saved Domains</h3>
+    <div id="domainsList"></div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
